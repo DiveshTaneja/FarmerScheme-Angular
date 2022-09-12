@@ -1,0 +1,86 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+body{
+  /*background-image: url("src\assets\farmerhome.jpg");*/
+  /* background-image:url("src/assets/login-bg.jpg") ; */
+  background-image: linear-gradient(to bottom right, #293d3d, #f0f5f5 );
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header
+{
+  min-width: fit-content;
+  min-height: 10vh;
+  color: whitesmoke;
+  background: #095e36;
+  right:0;
+  width: 100vw;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a  :visited{
+  color: #3c40c6;
+}
+ul li
+{
+  list-style: none;
+}
+h4{
+  color: #3c40c6;
+}
+.sideNav
+{
+  /* position: absolute;
+  background: #ace973; */
+  background: #3d4f4f;
+  width:19vw;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow:5px  darkgreen ;
+  border: 3px solid black;
+}
+/* .sideNav .logo
+{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.sideNav li{
+  padding: 20px;
+  color: #7f8c8d;
+  display: flex;
+  /* align-items: ; */
+}
+.sideNav li:hover{
+  background: gray;
+  color: #05c46b;
+  /* border-radius: 10px; */
+}
+.sideNav li:active{
+  background: gray;
+}
+.main
+{
+  margin-left: 280px;
+  width: 100vw;
+  height: 100vh;
+  position: left;
+}

@@ -1,0 +1,153 @@
+<br />
+<br />
+<div class="main">
+  <form (ngSubmit)="register()">
+    <div class="login-box" style="border-radius: 5%; box-shadow: black">
+      <!-- <img src="assets/farmer.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;"> -->
+      <h1
+        style="
+          margin-left: 10px;
+          text-align: center;
+          font-weight: bolder;
+          color: white;
+        "
+      >
+        Crop <span style="color: green">Details</span>
+      </h1>
+      <br />
+      <!-- <label for="t8"> FarmerId:</label>
+      <input  
+              type = "number" 
+              name = "t8" 
+              [(ngModel)] = crop.farmerid 
+              required
+              minlength="3"
+              #fid = "ngModel"          
+      /><br><br> -->
+      <!-- <label for="t1"> Crop Name:</label> -->
+      <input
+        type="text"
+        style="
+          margin-left: 20px;
+          padding: 8px;
+          padding-left: 20px;
+          padding-right: 380px;
+        "
+        name="t1"
+        [(ngModel)]="crop.cropName"
+        placeholder="Crop Name"
+        required
+        minlength="3"
+        #cname="ngModel"
+      /><br /><br />
+      <div
+        *ngIf="cname.invalid && (cname.dirty || cname.touched)"
+        class="alert"
+      >
+        <div *ngIf="cname.errors?.required">Crop Name is Required!</div>
+
+        <div *ngIf="cname.errors?.minlength">
+          Crop Name must be atleast 3 characters long
+        </div>
+      </div>
+
+      <select
+        [(ngModel)]="crop.croptype"
+        name="insurance"
+        id="insuranceapproval"
+        style="
+          margin-left: 20px;
+          padding: 8px;
+          padding-left: 20px;
+          padding-right: 415px;
+        "
+      >
+        <!-- <option value="" selected>Please Choose...</option> -->
+        <option value="Kharif">KHARIF</option>
+        <option value="Rabi">RABI</option>
+        <option value="Horiculture">HORICULTURE</option>
+      </select>
+
+      <br /><br />
+
+      <!-- <label for="t3"> Fertilizer:</label> -->
+      <input
+        style="
+          margin-left: 20px;
+          padding: 8px;
+          padding-left: 20px;
+          padding-right: 380px;
+        "
+        type="text"
+        placeholder="Fertilizer"
+        name="t3"
+        [(ngModel)]="crop.fertilizertype"
+        required
+        minlength="3"
+        #ftype="ngModel"
+      /><br /><br />
+      <div
+        *ngIf="ftype.invalid && (ftype.dirty || ftype.touched)"
+        class="alert"
+      >
+        <div *ngIf="ftype.errors?.required">Fertilizer Type is Required!</div>
+      </div>
+
+      <!-- <label for="t4"> Quantity:</label> -->
+      <input
+        type="number"
+        name="t4"
+        placeholder="Quantity"
+        style="
+          margin-left: 20px;
+          padding: 8px;
+          padding-left: 20px;
+          padding-right: 380px;
+        "
+        [(ngModel)]="crop.quantity"
+        required
+        #quan="ngModel"
+      /><br /><br />
+      <div *ngIf="quan.invalid && (quan.dirty || quan.touched)" class="alert">
+        <div *ngIf="ftype.errors?.required">Quantity is Required!</div>
+      </div>
+
+      <!-- Los Angeles <input type="text" style="margin-right: 180px" /> -->
+
+      <!-- <label for="t5"> Base Price:</label> -->
+      <input
+        type="number"
+        style="
+          margin-left: 20px;
+
+          padding: 8px;
+          padding-left: 20px;
+          padding-right: 380px;
+        "
+        placeholder="Base Price"
+        name="t5"
+        [(ngModel)]="crop.baseprice"
+        required
+        #bp="ngModel"
+      /><br /><br />
+      <div *ngIf="bp.invalid && (bp.dirty || bp.touched)" class="alert">
+        <div *ngIf="bp.errors?.required">Base Price is Required!</div>
+      </div>
+
+      <button
+        type="submit"
+        style="
+          margin-left: 230px;
+          padding: 12px;
+          padding-left: 55px;
+          padding-right: 55px;
+          color: white;
+          border-radius: 4px;
+          background-color: green;
+        "
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

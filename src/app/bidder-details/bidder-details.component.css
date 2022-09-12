@@ -1,0 +1,27 @@
+th{
+    
+    background-color: lightgray;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: medium;
+}
+tr:nth-child(even) 
+{
+    background-color: lightgray;
+}
+td{
+    border: 3px solid black;
+}
+table{
+    margin-left: 22%;
+    align-items: center;
+    border: 2px solid gray;
+    box-shadow: 2px solid greenyellow;
+}
+.box{
+    width: 500px;
+    height: 80px;
+    padding: 5px;
+    margin-left: 23%;
+    align-items: center;
+  }
